@@ -19,10 +19,10 @@ jxRequirements:
     schedule: ""
   cluster:
     chartRepository: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts
-    clusterName: todo
+    clusterName: test-cluster-name1
     devEnvApprovers:
-    - todo
-    environmentGitOwner: todo
+    - xmatoha
+    environmentGitOwner: xmatoha
     gitKind: github
     gitName: github
     gitServer: https://github.com
@@ -30,10 +30,12 @@ jxRequirements:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: xmatoha
+    repository: jx3-openshift
   - key: staging
   - key: production
   ingress:
-    domain: ""
+    domain: test-cluster-name1-b88e9eff3793808ae8109065a9606ad5-0000.us-south.containers.appdomain.cloud
     externalDNS: false
     kind: ingress
     namespaceSubDomain: -jx.
@@ -41,6 +43,8 @@ jxRequirements:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: xmatoha
   repository: bucketrepo
   secretStorage: local
   vault: {}

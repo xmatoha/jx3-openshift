@@ -1,0 +1,19 @@
+# Source: jxboot-helmfile-resources/templates/700-bucketrepo-ing.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  name: bucketrepo
+  namespace: jx
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  rules:
+    - http:
+        paths:
+          - backend:
+              serviceName: bucketrepo
+              servicePort: 80
+            path: "/"
+      host: bucketrepo-jx.test-cluster-name1-b88e9eff3793808ae8109065a9606ad5-0000.us-south.containers.appdomain.cloud

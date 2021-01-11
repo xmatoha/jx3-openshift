@@ -1,0 +1,30 @@
+# Source: jx-pipelines-visualizer/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-01-08T16:06:32Z"
+  deletionTimestamp: null
+  name: 'jx-pipelines-visualizer-0.0.67'
+  namespace: jx
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        email: v.behar@free.fr
+        name: Vincent Behar
+      branch: master
+      committer:
+        email: v.behar@free.fr
+        name: Vincent Behar
+      message: |
+        fix: always set a start time for pipelines
+
+        even if a pipeline has no start time yet, fallback to the creation time of the pipelineactivity
+      sha: c57b937e2324df4b1d13dad4737004e9986cc4cd
+  gitHttpUrl: https://github.com/jenkins-x/jx-pipelines-visualizer
+  gitOwner: jenkins-x
+  gitRepository: jx-pipelines-visualizer
+  name: 'jx-pipelines-visualizer'
+  version: 0.0.67
+status: {}

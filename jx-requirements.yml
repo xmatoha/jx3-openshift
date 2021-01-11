@@ -17,16 +17,21 @@ spec:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: xmatoha
+    repository: jx3-openshift
   - key: staging
   - key: production
   ingress:
-    domain: "test-cluster-name1-b88e9eff3793808ae8109065a9606ad5-0000.us-south.containers.appdomain.cloud"
+    domain: test-cluster-name1-b88e9eff3793808ae8109065a9606ad5-0000.us-south.containers.appdomain.cloud
     externalDNS: false
+    kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: xmatoha
   repository: bucketrepo
   secretStorage: local
   vault: {}
