@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        xmatoha/jx-node-http-1: true
         xmatoha/jx3-openshift: true
     plank: {}
     pod_namespace: jx
@@ -19,6 +20,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        xmatoha/jx-node-http-1: merge
         xmatoha/jx3-openshift: merge
       queries:
       - labels:
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - xmatoha/jx3-openshift
+        - xmatoha/jx-node-http-1
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - xmatoha/jx3-openshift
+        - xmatoha/jx-node-http-1
       target_url: http://dashboard-jx.test-cluster-name1-b88e9eff3793808ae8109065a9606ad5-0000.us-south.containers.appdomain.cloud
 kind: ConfigMap
 metadata:
