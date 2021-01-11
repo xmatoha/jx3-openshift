@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: xmatoha
+    provider: github
+    repository: jx-node-http-1
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: xmatoha-jx-node-http-1
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/xmatoha/jx-node-http-1.git
+  org: xmatoha
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jx-node-http-1
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/xmatoha/jx-node-http-1
